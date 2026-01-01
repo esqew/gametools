@@ -19,6 +19,14 @@ Support for international French-suited playing cards is available, with extensi
     deck = StandardDeck().shuffle()
     print(deck.cards) # [♠6], [♠9], [❤6], [♦K], [♠J], [♦A], [♣A]...
 
+### Coin
+Flippable RNG.
+
+   from gametools.coins import Coin
+
+   coin = Coin()
+   coin.flip() # CoinResult.HEADS or CoinResult.TAILS
+
 ### Bank
 A currency store, especially useful for "scorekeeping" in gambling-style games
  
