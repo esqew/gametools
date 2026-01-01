@@ -34,3 +34,12 @@ class StandardDie(Die):
     def roll(self) -> int:
         self._value = random.randint(1, self.sides)
         return self._value
+
+    def __repr__(self) -> str:
+        return f"StandardDie(sides={self.sides}, value={self._value})"
+    
+    def __str__(self) -> str:
+        if self.sides == 6:
+            # Use unicode representation of die with the correct number of pips
+            return ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"][self._value - 1]
+        return f"[{str(self._value)}]"
