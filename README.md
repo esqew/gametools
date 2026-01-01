@@ -16,3 +16,13 @@ The classic throwable RNG from all your favorite board games.
 
     deck = StandardDeck().shuffle()
     print(deck) # 
+
+### Bank
+A currency store, especially useful for "scorekeeping" in gambling-style games
+ 
+    from gametools.bank import PlayerBank
+
+    player_bank = PlayerBank(starting_balance=200.00)
+    player_bank.withdraw(125.00) # new balance: 75.00
+    player_bank.deposit(100.00) # new balance: 175.00
+
