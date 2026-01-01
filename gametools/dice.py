@@ -21,8 +21,21 @@ class Die(abc.ABC):
 class StandardDie(Die):
     """
     Representation of a standard n-sided die, with whole number values between 1 and n (inclusive).
+
+    Attributes:
+        sides (int): The number of sides on the die.
+        value (int): The current value of the die.
+
+    Methods:
+        roll() -> int: Rolls the die and returns the result.
     """
     def __init__(self, sides: int = 6) -> None:
+        """
+        Initialize a StandardDie with a specified number of sides.
+        
+        Args:
+            sides (int): The number of sides on the die. Default is 6.
+        """
         self.sides = sides
         self._value = 1
         return
@@ -32,6 +45,12 @@ class StandardDie(Die):
         return self._value
 
     def roll(self) -> int:
+        """
+        Roll the die and return the result.
+        
+        Returns:
+            int: The result of the die roll.
+        """
         self._value = random.randint(1, self.sides)
         return self._value
 
