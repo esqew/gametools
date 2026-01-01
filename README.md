@@ -12,10 +12,12 @@ The classic throwable RNG from all your favorite board games.
     print(die) # unicode representation of rolled value, i.e. ⚀
 
 ### Cards
+Support for international French-suited playing cards is available, with extensible base classes to create a number of different types of cards.
+
     from gametools.cards import StandardDeck
 
     deck = StandardDeck().shuffle()
-    print(deck) # 
+    print(deck.cards) # [♠6], [♠9], [❤6], [♦K], [♠J], [♦A], [♣A]...
 
 ### Bank
 A currency store, especially useful for "scorekeeping" in gambling-style games
